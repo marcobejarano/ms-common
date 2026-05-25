@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup Node
+      - name: Setup Node (for npm registry auth)
         uses: actions/setup-node@v6
         with:
           node-version: 24
@@ -28,6 +28,13 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
+
+      - name: Configure npm authentication
+        run: |
+          echo "@marcobejarano:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> ~/.npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_POWIP_TOKEN }}
 
       - name: Install dependencies
         run: bun install --frozen-lockfile
