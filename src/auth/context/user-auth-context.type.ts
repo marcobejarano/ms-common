@@ -1,4 +1,4 @@
-import { AuthContextType } from '../constants/auth-context-type.enum';
+import { AuthContextType } from './auth-context-type.enum';
 import type { AuthenticatedUser } from './authenticated-user.type';
 import type { BaseAuthContext } from './base-auth-context.type';
 

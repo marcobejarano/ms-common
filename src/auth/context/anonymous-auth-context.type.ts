@@ -1,4 +1,4 @@
-import { AuthContextType } from '../constants/auth-context-type.enum';
+import { AuthContextType } from './auth-context-type.enum';
 import type { BaseAuthContext } from './base-auth-context.type';
 
 export interface AnonymousAuthContext extends BaseAuthContext {

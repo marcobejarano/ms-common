@@ -1,5 +1,5 @@
 import { InvalidAccessTokenError } from "../../errors/invalid-access-token.error";
-import { AuthContextType } from "../constants/auth-context-type.enum";
+import { AuthContextType } from "../context/auth-context-type.enum";
 import type { AuthContext } from "../context/auth-context.type";
 import { extractBearerToken } from "./extract-bearer-token";
 import { InternalTokenType } from "./types/internal-token-type.enum";
