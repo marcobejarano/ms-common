@@ -1,5 +1,5 @@
 {
-  "name": "@powip/common",
+  "name": "@marcobejarano/common",
   "version": "1.0.0",
   "description": "Powip shared platform auth SDK",
   "type": "module",
